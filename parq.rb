@@ -5,21 +5,21 @@
 class Parq < Formula
   desc "A CLI for examining parquet files."
   homepage "https://github.com/a-poor/parq"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/a-poor/parq/releases/download/v0.0.7/parq_0.0.7_Darwin_x86_64.tar.gz"
-      sha256 "3bcfab5d69fc46a6842ee978057cd664a5c027d3d2fa8587fe7410b74d294abc"
+    if Hardware::CPU.arm?
+      url "https://github.com/a-poor/parq/releases/download/v0.0.8/parq_0.0.8_Darwin_arm64.tar.gz"
+      sha256 "698dace7f9e0ff62f620c68eec9cc0a26bbad0697bb2f65636cccb0a8f0eccb7"
 
       def install
         bin.install "parq"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/a-poor/parq/releases/download/v0.0.7/parq_0.0.7_Darwin_arm64.tar.gz"
-      sha256 "c0df39e14c9c544cea9881785f00e9197519ccf793d7a8a33a47eb5a0ebad354"
+    if Hardware::CPU.intel?
+      url "https://github.com/a-poor/parq/releases/download/v0.0.8/parq_0.0.8_Darwin_x86_64.tar.gz"
+      sha256 "12a3b141b6835ad283ffb029835fa37a1e31489bc0df7681954fe531f192c693"
 
       def install
         bin.install "parq"
@@ -28,17 +28,17 @@ class Parq < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/a-poor/parq/releases/download/v0.0.7/parq_0.0.7_Linux_arm64.tar.gz"
-      sha256 "42ebd36fd45a3bb15bcf0e98cb593840b31128d87806eeffc2b4a5149424f362"
+    if Hardware::CPU.intel?
+      url "https://github.com/a-poor/parq/releases/download/v0.0.8/parq_0.0.8_Linux_x86_64.tar.gz"
+      sha256 "57a5060ffc6d6a493f4a28d853d0d9b29939438109d903bc863ef650baceb5c7"
 
       def install
         bin.install "parq"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/a-poor/parq/releases/download/v0.0.7/parq_0.0.7_Linux_x86_64.tar.gz"
-      sha256 "e09b2d8ccbd4b9030ff042e16ea9d7766a82b7c01f8289fb41e0685f189f064f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/a-poor/parq/releases/download/v0.0.8/parq_0.0.8_Linux_arm64.tar.gz"
+      sha256 "f1dd09069f50c689fe075f9ae35c6c751f2d4ec93ac0a205a053ce09aee6ca5b"
 
       def install
         bin.install "parq"
