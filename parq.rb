@@ -5,21 +5,21 @@
 class Parq < Formula
   desc "A CLI for examining parquet files."
   homepage "https://github.com/a-poor/parq"
-  version "0.0.8"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/a-poor/parq/releases/download/v0.0.8/parq_0.0.8_Darwin_arm64.tar.gz"
-      sha256 "698dace7f9e0ff62f620c68eec9cc0a26bbad0697bb2f65636cccb0a8f0eccb7"
+      url "https://github.com/a-poor/parq/releases/download/v0.1.0/parq_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "bdce7527192d218978a0fa0312bc168353098c5f803083b318686b0b9eaf62a8"
 
       def install
         bin.install "parq"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/a-poor/parq/releases/download/v0.0.8/parq_0.0.8_Darwin_x86_64.tar.gz"
-      sha256 "12a3b141b6835ad283ffb029835fa37a1e31489bc0df7681954fe531f192c693"
+      url "https://github.com/a-poor/parq/releases/download/v0.1.0/parq_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "2ee1431ad536eb1c47415cb33ce21eb04c98384968cefaf34da8f7893a7b18e6"
 
       def install
         bin.install "parq"
@@ -29,16 +29,16 @@ class Parq < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/a-poor/parq/releases/download/v0.0.8/parq_0.0.8_Linux_x86_64.tar.gz"
-      sha256 "57a5060ffc6d6a493f4a28d853d0d9b29939438109d903bc863ef650baceb5c7"
+      url "https://github.com/a-poor/parq/releases/download/v0.1.0/parq_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "7f4e74d320179ce57e3fb71cc624d62ee7cc7620002d0095edd837d0468f7331"
 
       def install
         bin.install "parq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/a-poor/parq/releases/download/v0.0.8/parq_0.0.8_Linux_arm64.tar.gz"
-      sha256 "f1dd09069f50c689fe075f9ae35c6c751f2d4ec93ac0a205a053ce09aee6ca5b"
+      url "https://github.com/a-poor/parq/releases/download/v0.1.0/parq_0.1.0_Linux_arm64.tar.gz"
+      sha256 "f93a3b4ea6da27366932c88c2081d226eb43453eb98b69019373de1ed9cfd4cc"
 
       def install
         bin.install "parq"
